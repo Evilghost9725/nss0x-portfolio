@@ -1,42 +1,12 @@
-# nss0x-portfolio
+# React + Vite
 
-A personal portfolio website to showcase my projects, skills, and background. Built using the MERN stack with a focus on responsiveness, performance, and elegant UI/UX.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## 🚧 Project Status
+Currently, two official plugins are available:
 
-Currently in development. Structure, layout, and backend architecture are being planned and implemented iteratively.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## 🛠️ Tech Stack
+## Expanding the ESLint configuration
 
-- **MongoDB** – NoSQL database for storing project data
-- **Express.js** – Backend framework for API and routing
-- **React.js** – Frontend library for building a dynamic, responsive interface
-- **Node.js** – JavaScript runtime for server-side development
-
-## ✨ Key Features (Planned)
-
-- Fully responsive design
-- Portfolio section with filters and live project previews
-- Resume download & professional profile
-- Contact form with backend email integration
-- Optional blog for sharing technical content
-- Theme switcher (Dark/Light mode)
-
-## 🚀 Deployment Plan
-
-- **Frontend Hosting**: Vercel or Netlify
-- **Backend Hosting**: Render, Railway, or custom VPS
-- **Domain**: Deployed on [`nss0x.tech`](https://nss0x.tech)
-- **SSL**: HTTPS with SSL certificate for secure access
-
-## 📅 Roadmap
-
-- [ ] Design layout and wireframes
-- [ ] Backend API and data modeling
-- [ ] Build frontend components
-- [ ] Integrate backend and deploy
-- [ ] Final optimizations and domain launch
-
----
-
-> This README will be updated regularly as the project evolves.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
