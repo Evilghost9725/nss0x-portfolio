@@ -1,0 +1,30 @@
+/* Clean Theme - Light background, minimal colors, clean typography */
+[data-theme="clean"] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-tertiary: #e9ecef;
+  
+  --text-primary: #212529;
+  --text-secondary: #495057;
+  --text-muted: #6c757d;
+  --text-inverse: #ffffff;
+  
+  --accent-primary: #007bff;
+  --accent-secondary: #0056b3;
+  --accent-glow: #007bff20;
+  
+  --border-color: #dee2e6;
+  --border-hover: #adb5bd;
+  
+  --font-family: 'Inter', 'Segoe UI', 'Roboto', sans-serif;
+  --font-size-base: 16px;
+  --font-weight-normal: 400;
+  --font-weight-bold: 500;
+  
+  --shadow-glow: 0 0 20px var(--accent-glow);
+  --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.1);
+  
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.6s ease;
+}

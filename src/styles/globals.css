@@ -1,13 +1,12 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* Import theme files */
+@import './themes/terminal.css';
+@import './themes/neon.css';
+@import './themes/clean.css';
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html,
@@ -16,27 +15,73 @@ body {
   overflow-x: hidden;
 }
 
+/* Set default theme */
+html {
+  color-scheme: dark;
+}
+
+html:not([data-theme]) {
+  /* Default to terminal theme */
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #1a1a1a;
+  --bg-tertiary: #2a2a2a;
+  --text-primary: #00ff00;
+  --text-secondary: #00cc00;
+  --text-muted: #888888;
+  --text-inverse: #000000;
+  --accent-primary: #00ff00;
+  --accent-secondary: #00cc00;
+  --accent-glow: #00ff0040;
+  --border-color: #00ff0030;
+  --border-hover: #00ff0060;
+  --font-family: 'Courier New', 'Monaco', 'Menlo', monospace;
+  --font-size-base: 14px;
+  --font-weight-normal: 400;
+  --font-weight-bold: 600;
+  --shadow-glow: 0 0 20px var(--accent-glow);
+  --shadow-card: 0 4px 12px rgba(0, 255, 0, 0.1);
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.6s ease;
+}
+
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  transition: all var(--transition-normal);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
 a {
-  color: inherit;
+  color: var(--accent-primary);
   text-decoration: none;
+  transition: color var(--transition-fast);
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+a:hover {
+  color: var(--accent-secondary);
+}
+
+/* Loading animation for progress bars */
+@keyframes loading {
+  0% {
+    transform: translateX(-100%);
   }
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Smooth transitions for theme changes */
+* {
+  transition: background-color var(--transition-normal), 
+              color var(--transition-normal), 
+              border-color var(--transition-normal);
 }

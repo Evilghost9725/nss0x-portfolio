@@ -1,0 +1,30 @@
+/* Neon Theme - Dark background, blue/purple accents, modern fonts */
+[data-theme="neon"] {
+  --bg-primary: #0f0f23;
+  --bg-secondary: #1a1a2e;
+  --bg-tertiary: #16213e;
+  
+  --text-primary: #e94560;
+  --text-secondary: #0f3460;
+  --text-muted: #a8a8a8;
+  --text-inverse: #ffffff;
+  
+  --accent-primary: #e94560;
+  --accent-secondary: #0f3460;
+  --accent-glow: #e9456040;
+  
+  --border-color: #e9456030;
+  --border-hover: #e9456060;
+  
+  --font-family: 'Inter', 'Segoe UI', 'Roboto', sans-serif;
+  --font-size-base: 16px;
+  --font-weight-normal: 400;
+  --font-weight-bold: 600;
+  
+  --shadow-glow: 0 0 30px var(--accent-glow);
+  --shadow-card: 0 8px 24px rgba(233, 69, 96, 0.15);
+  
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.6s ease;
+}
