@@ -1,5 +1,6 @@
 import { useTheme } from '@/hooks/useTheme';
 import { usePhase } from '@/hooks/usePhase';
+import { Theme } from '@/types/appPhases';
 import RadialMenu, { RadialOption } from '@/components/ui/RadialMenu';
 
 export default function ThemeSelection() {
@@ -37,7 +38,7 @@ export default function ThemeSelection() {
   ];
 
   const handleThemeSelect = (themeId: string) => {
-    setTheme(themeId as any);
+    setTheme(themeId as Theme);
     
     // Transition to cursor selection after a brief delay
     setTimeout(() => {

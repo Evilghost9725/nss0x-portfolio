@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import { usePhase } from '@/hooks/usePhase';
 import styles from '@/styles/BootSequence.module.css';
 
@@ -17,7 +17,7 @@ export default function BootSequence() {
   const [isTyping, setIsTyping] = useState(false);
   const [currentProgress, setCurrentProgress] = useState(0);
 
-  const bootLogs: BootLog[] = [
+  const bootLogs = useMemo(() => [
     { id: 1, text: "NSS0X Portfolio System v2.1.0", delay: 500 },
     { id: 2, text: "Copyright (c) 2025 NSS0X Technologies", delay: 300 },
     { id: 3, text: "Initializing system components...", delay: 600, isLoading: true },
@@ -27,7 +27,7 @@ export default function BootSequence() {
     { id: 7, text: "Initializing graphics drivers...", delay: 600 },
     { id: 8, text: "Loading user interface components...", delay: 900, progress: 0 },
     { id: 9, text: "System ready. Launching theme selection...", delay: 1000 },
-  ];
+  ], []);
 
   useEffect(() => {
     if (currentLogIndex >= bootLogs.length) {
@@ -59,7 +59,7 @@ export default function BootSequence() {
     }, currentLog.delay);
 
     return () => clearTimeout(timer);
-  }, [currentLogIndex, transitionToPhase]);
+  }, [currentLogIndex, transitionToPhase, bootLogs]);
 
   const simulateProgress = () => {
     let progress = 0;

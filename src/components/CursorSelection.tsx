@@ -1,5 +1,6 @@
 import { useCursor } from '@/hooks/useCursor';
 import { usePhase } from '@/hooks/usePhase';
+import { CursorType } from '@/types/appPhases';
 import RadialMenu, { RadialOption } from '@/components/ui/RadialMenu';
 
 export default function CursorSelection() {
@@ -31,7 +32,7 @@ export default function CursorSelection() {
   ];
 
   const handleCursorSelect = (cursorId: string) => {
-    setCursor(cursorId as any);
+    setCursor(cursorId as CursorType);
     
     // Transition to system ready after a brief delay
     setTimeout(() => {
